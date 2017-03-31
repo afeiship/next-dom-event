@@ -54,7 +54,7 @@
   });
 
   if (typeof module !== 'undefined' && module.exports) {
-    module.exports = on;
+    module.exports = DomEvent.on;
   }
 
 }());
