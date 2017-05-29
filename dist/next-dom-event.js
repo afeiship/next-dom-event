@@ -3,6 +3,7 @@
   var global = this || window;
   var nx = global.nx || require('next-js-core2');
   var document = global.document;
+  var emptyArray = [];
   var addEventListener = (function () {
     if (document.addEventListener) {
       return function (inElement, inName, inCallback, inCapture) {
@@ -42,11 +43,12 @@
   var DomEvent = nx.declare('nx.dom.Event', {
     statics: {
       on: function () {
-        var args = nx.toArray(arguments);
-        addEventListener.apply(null,args);
+        var context = arguments[0];
+        var args = emptyArray.slice.call(arguments, 1);
+        addEventListener.apply(context,args);
         return {
           destroy:function(){
-            return removeEventListener.apply(null,args);
+            return removeEventListener.apply(context,args);
           }
         }
       }
