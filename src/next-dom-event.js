@@ -43,10 +43,11 @@
     statics: {
       on: function () {
         var args = nx.toArray(arguments);
-        addEventListener.apply(null,args);
+        var context = this;
+        addEventListener.apply(context,args);
         return {
           destroy:function(){
-            return removeEventListener.apply(null,args);
+            return removeEventListener.apply(context,args);
           }
         }
       },
