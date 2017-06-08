@@ -43,7 +43,7 @@
     statics: {
       on: function () {
         var args = nx.toArray(arguments);
-        var context = this;
+        var context = args[0];
         addEventListener.apply(context,args);
         return {
           destroy:function(){
