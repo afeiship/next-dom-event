@@ -43,33 +43,34 @@
     statics: {
       on: function () {
         var target = arguments[0];
-        if(nx.isFunction(target.on)){
-          var args = [].slice.call(arguments,1);
-          return target.on.apply(target,args);
-        }else{
+        if (nx.isFunction(target.on)) {
+          var args = [].slice.call(arguments, 1);
+          // return target.on.call.apply(target, arguments);
+          return target.on.apply(target, args);
+        } else {
           var args = nx.toArray(arguments);
           var context = args[0];
-          addEventListener.apply(context,args);
+          addEventListener.apply(context, args);
           return {
-            destroy:function(){
-              return removeEventListener.apply(context,args);
+            destroy: function () {
+              return removeEventListener.apply(context, args);
             }
           }
         }
       },
-      timeout: function(inCallback,inInterval){
-        var timer = global.setTimeout(inCallback,inInterval || 0);
+      timeout: function (inCallback, inInterval) {
+        var timer = global.setTimeout(inCallback, inInterval || 0);
         return {
-          destroy:function(){
+          destroy: function () {
             clearTimeout(timer);
             timer = null;
           }
         };
       },
-      interval: function(inCallback,inInterval){
-        var timer = global.setInterval(inCallback,inInterval || 0);
+      interval: function (inCallback, inInterval) {
+        var timer = global.setInterval(inCallback, inInterval || 0);
         return {
-          destroy:function(){
+          destroy: function () {
             clearInterval(timer);
             timer = null;
           }
