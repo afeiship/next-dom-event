@@ -44,9 +44,7 @@
       on: function () {
         var target = arguments[0];
         if (nx.isFunction(target.on)) {
-          var args = [].slice.call(arguments, 1);
-          // return target.on.call.apply(target, arguments);
-          return target.on.apply(target, args);
+          return target.on.call.apply(target.on, arguments);
         } else {
           var args = nx.toArray(arguments);
           var context = args[0];
