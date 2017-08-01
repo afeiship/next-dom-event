@@ -43,8 +43,9 @@
     statics: {
       on: function () {
         var target = arguments[0];
-        if (nx.isFunction(target.on)) {
-          return target.on.call.apply(target.on, arguments);
+        var onFn = target.on;
+        if (nx.isFunction(onFn)) {
+          return onFn.call.apply(onFn, arguments);
         } else {
           var args = nx.toArray(arguments);
           var context = args[0];
