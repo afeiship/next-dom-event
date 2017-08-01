@@ -42,12 +42,18 @@
   var DomEvent = nx.declare('nx.dom.Event', {
     statics: {
       on: function () {
-        var args = nx.toArray(arguments);
-        var context = args[0];
-        addEventListener.apply(context,args);
-        return {
-          destroy:function(){
-            return removeEventListener.apply(context,args);
+        var target = arguments[0];
+        if(nx.isFunction(target.on)){
+          var args = [].slice.call(arguments,1);
+          return target.on.apply(target,args);
+        }else{
+          var args = nx.toArray(arguments);
+          var context = args[0];
+          addEventListener.apply(context,args);
+          return {
+            destroy:function(){
+              return removeEventListener.apply(context,args);
+            }
           }
         }
       },
