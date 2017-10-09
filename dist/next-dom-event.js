@@ -56,24 +56,6 @@
             }
           }
         }
-      },
-      timeout: function (inCallback, inInterval) {
-        var timer = global.setTimeout(inCallback, inInterval || 0);
-        return {
-          destroy: function () {
-            clearTimeout(timer);
-            timer = null;
-          }
-        };
-      },
-      interval: function (inCallback, inInterval) {
-        var timer = global.setInterval(inCallback, inInterval || 0);
-        return {
-          destroy: function () {
-            clearInterval(timer);
-            timer = null;
-          }
-        };
       }
     }
   });
