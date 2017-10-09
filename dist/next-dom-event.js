@@ -1,8 +1,10 @@
 (function () {
 
-  var global = this || window;
+  var global = global || this || self || window;
   var nx = global.nx || require('next-js-core2');
   var document = global.document;
+  var FUNCTION = 'function';
+
   var addEventListener = (function () {
     if (document.addEventListener) {
       return function (inElement, inName, inCallback, inCapture) {
@@ -44,10 +46,10 @@
       on: function () {
         var target = arguments[0];
         var onFn = target.on;
-        if (nx.isFunction(onFn)) {
+        if (typeof(onFn) === FUNCTION) {
           return onFn.call.apply(onFn, arguments);
         } else {
-          var args = nx.toArray(arguments);
+          var args = nx.slice(arguments);
           var context = args[0];
           addEventListener.apply(context, args);
           return {
