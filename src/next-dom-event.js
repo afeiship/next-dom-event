@@ -41,7 +41,7 @@
     }
   })();
 
-  var DomEvent = nx.declare('nx.dom.Event', {
+  var NxDomEvent = nx.declare('nx.dom.Event', {
     statics: {
       on: function () {
         var target = arguments[0];
@@ -63,7 +63,7 @@
   });
 
   if (typeof module !== 'undefined' && module.exports) {
-    module.exports = DomEvent;
+    module.exports = NxDomEvent;
   }
 
 }());
