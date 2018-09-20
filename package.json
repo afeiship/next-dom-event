@@ -1,6 +1,6 @@
 {
   "name": "next-dom-event",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Dom event api based on next toolkit.",
   "homepage": "https://github.com/afeiship/next-dom-event",
   "author": {
