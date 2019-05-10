@@ -1,10 +1,6 @@
 # next-dom-event
 > Dom event api based on next toolkit.
 
-## size:
-+ [ default size ]: all files 1.74 kB
-+ [ minimize size ]: all files 804 B
-
 ## use webpack:
 ```js
 //import package:
@@ -62,8 +58,3 @@ res3.destory();
     });
   </script>
 ```
-
-## resources:
-
-## todos:
-- [ ] todo list..
