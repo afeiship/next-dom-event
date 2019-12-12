@@ -1,4 +1,4 @@
-(function() {
+(function () {
 
   'use strict';
 
@@ -11,11 +11,10 @@
   });
 
   //import
-  fs.readdirSync('./build').map(function(file) {
+  fs.readdirSync('./build').map(function (file) {
     require('./build/' + file);
   });
 
 
-  gulp.task('default',['build']);
-
+  gulp.task('default', gulp.series(['clean', 'scripts']));
 }());

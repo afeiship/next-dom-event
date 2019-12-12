@@ -3,8 +3,6 @@
   'use strict';
 
   var gulp = require('gulp');
-  var config = require('./config');
-  var argv = require('yargs').argv;
   var $ = require('gulp-load-plugins')({
     pattern: ['gulp-*', 'gulp.*', 'del']
   });
@@ -14,9 +12,7 @@
       .pipe(gulp.dest('dist'))
       .pipe($.size({title: '[ default size ]:'}))
       .pipe($.uglify())
-      .pipe($.rename({
-        extname: '.min.js'
-      }))
+      .pipe($.rename({ extname: '.min.js' }))
       .pipe(gulp.dest('dist'))
       .pipe($.size({title: '[ minimize size ]:'}));
   });
