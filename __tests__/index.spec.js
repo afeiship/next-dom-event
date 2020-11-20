@@ -1,13 +1,9 @@
 (function() {
-  var nx = require('@feizheng/next-js-core2');
-  var NxDomEvent = require('../src/next-dom-event');
+  const NxDomEvent = require('../src');
 
   describe('NxDomEvent.methods', function() {
     test('init', function() {
-      var data = {
-        key: 1,
-        value: 2
-      };
+      const data = { key: 1, value: 2 };
       expect(!!data).toBe(true);
     });
   });

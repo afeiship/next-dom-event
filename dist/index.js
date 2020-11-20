@@ -1,15 +1,15 @@
 /*!
- * name: @feizheng/next-dom-event
- * url: https://github.com/afeiship/next-dom-event
- * version: 2.0.0
- * date: 2019-12-12T03:51:37.438Z
+ * name: @jswork/next-dom-event
+ * description: Dom event api based on next toolkit.
+ * homepage: https://github.com/afeiship/next-dom-event
+ * version: 1.0.0
+ * date: 2020-11-20 20:15:58
  * license: MIT
  */
 
-(function () {
-
+(function() {
   var global = global || this || window || Function('return this')();
-  var nx = global.nx || require('@feizheng/next-js-core2');
+  var nx = global.nx || require('@jswork/next');
   var document = global.document;
   var FUNCTION = 'function';
 
@@ -70,11 +70,7 @@
     }
   });
 
-
   if (typeof module !== 'undefined' && module.exports) {
     module.exports = NxDomEvent;
   }
-
-}());
-
-//# sourceMappingURL=next-dom-event.js.map
+})();
