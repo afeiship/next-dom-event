@@ -18,7 +18,7 @@ npm install -S @jswork/next-dom-event
 
 ## usage
 ```js
-import NxDomEvent from '@feizheng/next-dom-event';
+import NxDomEvent from '@jswork/next-dom-event';
 
 //create resources:
 const el = document.getElement('test1');
