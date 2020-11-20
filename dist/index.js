@@ -2,8 +2,8 @@
  * name: @jswork/next-dom-event
  * description: Dom event api based on next toolkit.
  * homepage: https://github.com/afeiship/next-dom-event
- * version: 1.0.0
- * date: 2020-11-20 20:30:51
+ * version: 1.0.1
+ * date: 2020-11-20 20:32:13
  * license: MIT
  */
 
