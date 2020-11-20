@@ -34,5 +34,11 @@
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org"
-  }
+  },
+  "keywords": [
+    "next",
+    "dom",
+    "event",
+    "on"
+  ]
 }

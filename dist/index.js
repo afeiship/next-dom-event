@@ -3,7 +3,7 @@
  * description: Dom event api based on next toolkit.
  * homepage: https://github.com/afeiship/next-dom-event
  * version: 1.0.0
- * date: 2020-11-20 20:15:58
+ * date: 2020-11-20 20:30:51
  * license: MIT
  */
 
