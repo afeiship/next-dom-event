@@ -1,7 +1,10 @@
+type OnReturnValue = {
+  destroy: () => void;
+}
+
 interface NxStatic {
   DomEvent: {
-    on: (el: HTMLElement, eventName: string, listener: (event: Event) => void, options?: any) => {
-      destroy: () => void;
-    }
+    on(el: HTMLElement, type: string, listener: (event: Event) => void, useCapture?: boolean): OnReturnValue
+    on(el: HTMLElement, type: string, listener: (event: Event) => void, options?: any): OnReturnValue
   }
 }
