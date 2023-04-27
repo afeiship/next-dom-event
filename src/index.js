@@ -1,6 +1,6 @@
 import nx from '@jswork/next';
 
-const document = global.document;
+const document = nx.GLOBAL.document;
 const FUNCTION = 'function';
 
 const addEventListener = (function () {
