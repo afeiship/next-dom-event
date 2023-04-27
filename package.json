@@ -1,6 +1,6 @@
 {
   "name": "@jswork/next-dom-event",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Dom event api based on next toolkit.",
   "homepage": "https://js.work",
   "author": {
@@ -43,5 +43,11 @@
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org"
-  }
+  },
+  "keywords": [
+    "next",
+    "dom",
+    "event",
+    "on"
+  ]
 }
