@@ -4,14 +4,14 @@ const document = nx.GLOBAL.document;
 const FUNCTION = 'function';
 
 const addEventListener = (function () {
-  if (document.addEventListener) {
+  if (document?.addEventListener) {
     return function (inElement, inName, inCallback, inCapture) {
-      inElement.addEventListener(inName, inCallback, inCapture || false);
+      inElement?.addEventListener(inName, inCallback, inCapture || false);
     };
-  } else if (document.attachEvent) {
+  } else if (document?.attachEvent) {
     return function (inElement, inName, inCallback) {
       const name = 'on' + inName;
-      inElement.attachEvent(name, function (e) {
+      inElement?.attachEvent(name, function (e) {
         e = e || global.event;
         e.target = e.target || e.srcElement;
         e.currentTarget = node;
@@ -22,14 +22,14 @@ const addEventListener = (function () {
 })();
 
 const removeEventListener = (function () {
-  if (document.removeEventListener) {
+  if (document?.removeEventListener) {
     return function (inElement, inName, inCallback, inCapture) {
-      inElement.removeEventListener(inName, inCallback, inCapture || false);
+      inElement?.removeEventListener(inName, inCallback, inCapture || false);
     };
-  } else if (document.detachEvent) {
+  } else if (document?.detachEvent) {
     return function (inElement, inName, inCallback) {
       var name = 'on' + inName;
-      inElement.detachEvent(name, function (e) {
+      inElement?.detachEvent(name, function (e) {
         e = e || global.event;
         e.target = e.target || e.srcElement;
         e.currentTarget = node;
