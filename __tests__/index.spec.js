@@ -1,4 +1,4 @@
-const NxDomEvent = require('../src');
+import NxDomEvent from '../src';
 
 describe('NxDomEvent.methods', function () {
   test('exist: on function should exist', function () {

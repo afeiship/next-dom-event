@@ -60,8 +60,8 @@ var NxDomEvent = nx.declare('nx.DomEvent', {
   }
 });
 
-if (typeof module !== 'undefined' && module.exports) {
-  module.exports = NxDomEvent;
-}
+// if (typeof module !== 'undefined' && module.exports) {
+//   module.exports = NxDomEvent;
+// }
 
 export default NxDomEvent;
